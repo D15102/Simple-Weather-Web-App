@@ -47,7 +47,7 @@ const App = () => {
   const fetchData = async () => {
     if (input.trim() !== "") {
       setShowSkeleton(true)
-      const url = `http://api.weatherapi.com/v1/current.json?key=8804429c39e642cf856120858252502&q=${input.trim()}&aqi=yes`;
+      const url = `https://api.weatherapi.com/v1/current.json?key=8804429c39e642cf856120858252502&q=${input.trim()}&aqi=yes`;
       try {
         const response = await axios.get(url);
         setdata(response.data); // Save API response to state
